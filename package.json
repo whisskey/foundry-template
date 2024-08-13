@@ -1,6 +1,6 @@
 {
-  "name": "foundry-bun-template",
-  "description": "Foundry bun template",
+  "name": "foundry-template",
+  "description": "A Foundry-based template for efficient Solidity smart contract development with optimized defaults.",
   "version": "1.0.0",
   "dependencies": {
     "@openzeppelin/contracts": "^5.0.2",

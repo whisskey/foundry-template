@@ -1,4 +1,4 @@
-# Foundry Bun Template
+# Foundry Template
 
 A Foundry-based template for efficient Solidity smart contract development with optimized defaults.
 
