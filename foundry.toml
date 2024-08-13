@@ -62,8 +62,8 @@
   wrap_comments = true
 
 [etherscan]
-  # mainnet = { key = "${API_KEY_ETHERSCAN}" }
-  # sepolia = { key = "${API_KEY_ETHERSCAN}" }
+  mainnet = { key = "${API_KEY_ETHERSCAN}" }
+  sepolia = { key = "${API_KEY_ETHERSCAN}" }
 
 [rpc_endpoints]
   localhost = "http://localhost:8545"
