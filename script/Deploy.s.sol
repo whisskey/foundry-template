@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity >=0.8.26 <0.9.0;
 
-import {BaseScript} from "./Base.s.sol";
-import {console} from "forge-std/src/Test.sol";
+import { BaseScript } from "./Base.s.sol";
+import { console } from "forge-std/src/Test.sol";
 
-import {Foo} from "../src/Foo.sol";
-import {WETH} from "solady/tokens/WETH.sol";
+import { Foo } from "../src/Foo.sol";
+import { WETH } from "solady/tokens/WETH.sol";
 
 contract Deploy is BaseScript {
     struct ContractInfo {

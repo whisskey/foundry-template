@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity >=0.8.26 <0.9.0;
 
-import {Foo} from "../src/Foo.sol";
+import { Foo } from "../src/Foo.sol";
 
-import {Test, console} from "forge-std/src/Test.sol";
+import { Test, console } from "forge-std/src/Test.sol";
 
 contract FooTest is Test {
     Foo internal foo;
@@ -30,10 +30,10 @@ contract FooTest is Test {
             return;
         }
 
-        vm.createSelectFork({urlOrAlias: "mainnet", blockNumber: 20496798});
+        vm.createSelectFork({ urlOrAlias: "mainnet", blockNumber: 20_496_798 });
         address holder = 0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045;
         uint256 actualBalance = holder.balance;
-        uint256 expectedBalance = 200524731781790766618;
+        uint256 expectedBalance = 200_524_731_781_790_766_618;
         assertEq(actualBalance, expectedBalance);
     }
 
@@ -51,5 +51,5 @@ contract FooTest is Test {
                                       HELPERS
     //////////////////////////////////////////////////////////////////////////*/
 
-    function _helper() private {}
+    function _helper() private { }
 }
