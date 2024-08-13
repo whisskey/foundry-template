@@ -1,0 +1,71 @@
+[profile.default]
+  contracts = "src"
+  test = "test"
+  out = "out"
+  script = "script"
+  solc = "0.8.26"
+  auto_detect_solc = false
+  optimizer = false
+  verbosity = 3
+  block_timestamp = 1_723_582_800 # Aug 14, 2024 at 00:00 GMT
+  gas_limit = "18446744073709551615"
+  gas_reports = ["*"]
+  bytecode_hash = "none"
+  evm_version = "shanghai"
+  ffi = true
+  fs_permissions = [
+    { access = "read", path = "./out" },
+  ]
+
+[profile.production]
+  optimizer      = true  # Enable or disable the solc optimizer
+  optimizer_runs = 1000   # The number of optimizer runs
+
+[fuzz]
+  max_test_rejects = 1_000_000 # Number of times `vm.assume` can fail
+  runs = 100
+
+[profile.deep.fuzz]
+  optimizer = true
+  runs      = 1_000
+
+[profile.super_deep.fuzz]
+  optimizer = true
+  runs      = 10_000
+
+[invariant]
+  call_override = false   # Override unsafe external calls to perform reentrancy checks
+  depth = 100            # Number of calls executed in one run
+  fail_on_revert = true
+  runs = 20
+
+[profile.deep.invariant]
+  optimizer      = true
+  runs           = 10     # The number of times to run the invariant tests
+  depth          = 250    # The number of calls to make in the invariant tests
+  call_override  = false  # Override calls
+  fail_on_revert = true   # Fail the test if the contract reverts
+
+[profile.super_deep.invariant]
+  optimizer = true
+  runs      = 200  # The number of calls to make in the invariant tests
+  depth     = 250  # The number of times to run the invariant tests
+
+[fmt]
+  bracket_spacing = true
+  int_types = "long"
+  line_length = 120
+  multiline_func_header = "all"
+  number_underscore = "thousands"
+  quote_style = "double"
+  tab_width = 4
+  wrap_comments = true
+
+[etherscan]
+  # mainnet = { key = "${API_KEY_ETHERSCAN}" }
+  # sepolia = { key = "${API_KEY_ETHERSCAN}" }
+
+[rpc_endpoints]
+  localhost = "http://localhost:8545"
+  mainnet = "${RPC_URL_MAINNET}"
+  sepolia = "${RPC_URL_SEPOLIA}"
