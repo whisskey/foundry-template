@@ -21,7 +21,7 @@ In addition, familiarity with [Solidity](https://soliditylang.org) is requisite.
 Clone this repository:
 
 ```sh
-$ git clone https://github.com/whisskey/foundry-bun-template.git
+$ git clone https://github.com/whisskey/foundry-template.git
 ```
 
 Then, inside the project's directory, run this to install the Node.js dependencies:
